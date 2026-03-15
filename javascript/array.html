@@ -1,0 +1,33 @@
+<head><link rel="styleSheet" href="body.css"></head>
+<body>
+
+<h2>💕❤️💕👍 Guess The Number (1 - 10)</h2>
+
+<input type="number" id="guess" placeholder="Enter number">
+<button onclick="checkGuess()">Guess</button>
+
+<p id="result"></p>
+<script>
+    let game={secret:  Math.floor(Math.random()*10)+2,
+        attempt: 0,
+    }
+    let guesse=[];
+    function checkGuess(){
+        let input= Number(document.getElementById("guess").value);
+        guesse.push(input);
+        game.attempt++;
+    if(input === game.secret){
+        document.getElementById("result").innerHTML= "🎉👍😍🙌 Correct! Number was "+game.secret+"<br>Attempts: "+game.attempt+"<br>Your guesses: "+guesse+`<button><a href="https://www.youtube.com/impunzi">home</a></button>`;
+
+    }
+    else if(input>game.secret){
+        document.getElementById("result").innerHTML="😊too high,try again";
+    }
+    else{
+        document.getElementById("result").innerHTML="😒too low, try again";
+    }
+    }
+
+
+</script>
+</body>
