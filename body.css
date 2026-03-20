@@ -1,3 +1,16 @@
+/* This code only runs on screens smaller than 600px (phones) */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+    font-size: 16px; /* Larger font is easier to read on phones */
+  }
+
+  .container {
+    width: 100%; /* Make your main container fill the screen width */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+  }
+}
 body{
     background-color: lightblue;
     word-spacing: 10px;
